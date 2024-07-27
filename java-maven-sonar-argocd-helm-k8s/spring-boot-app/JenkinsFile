@@ -33,7 +33,7 @@ pipeline {
       steps {
            sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && docker build -t lokeshhs591/ultimate-cicd-abhishek:${BUILD_NUMBER} .'
                 withCredentials([usernameColonPassword(credentialsId: 'docker-cred', variable: 'DOCKERHUB')]) {
-                sh 'docker login -u lokeshhs591 -p ${DOCKERHUB}'
+                sh 'docker login -u lokeshhs591 -p Lokeshhs591@gmail.com'
                 sh 'docker push lokeshhs591/ultimate-cicd-abhishek:${BUILD_NUMBER}'
               }
             }
